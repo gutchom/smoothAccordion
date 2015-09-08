@@ -1,0 +1,2 @@
+# autoHightAccordion
+jQuery plug-in
