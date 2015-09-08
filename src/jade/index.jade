@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title autoHightAccordion.js
+    link(rel="stylesheet", href="./css/style.css")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script(src='./js/jquery.autoHightAccordion.js')
+    script(src='./js/demo.js')
+  body
+    h1 click "title 1-4" and open them
+    - contents = []
+    - contents.push({title:'title 1', body:'line 1'})
+    - contents.push({title:'title 2', body:'line 1<br>line 2'})
+    - contents.push({title:'title 3', body:'line 1<br>line 2<br>line 3'})
+    - contents.push({title:'title 4', body:'line 1<br>line 2<br>line 3<br>line 4'})
+    for content in contents
+      .accordion-wrapper
+        div
+          p!= content.title
+        div
+          p!= content.body
