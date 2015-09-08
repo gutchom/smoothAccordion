@@ -1,0 +1,50 @@
+{
+  "name": "autoHightAccordion",
+  "version": "1.0.0",
+  "description": "accordion with auto adjusted height",
+  "main": "gulpfile.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:keito-jp/cloudVj.git"
+  },
+  "keywords": [
+    "jQuery"
+  ],
+  "author": "gutchom",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/gutchom/autoHightAccordion/issues"
+  },
+  "homepage": "http://cloudvj.club",
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "gulp": "^3.8.11",
+    "gulp-changed": "^1.2.1",
+    "gulp-coffee": "^2.3.1",
+    "gulp-coffeelint": "^0.4.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-csscomb": "^3.0.3",
+    "gulp-cssmin": "^0.1.6",
+    "gulp-data": "^1.2.0",
+    "gulp-header": "^1.2.2",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jade": "^1.0.0",
+    "gulp-jshint": "^1.9.4",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-pleeease": "^1.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-sass": "^1.3.3",
+    "gulp-sitemap-files": "^1.0.2",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "^3.0.4",
+    "gulp-webserver": "^0.9.0",
+    "main-bower-files": "^2.8.0"
+  }
+}
