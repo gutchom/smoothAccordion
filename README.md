@@ -5,15 +5,21 @@ It realizes use css3 transition for `height: auto` block element.
 You can write down any length content in accordion box, and it will expand and close smoothly.
 
 # How to use
-## HTML markup
+## HTML
 ```html
-<div class="class-name">
-  <div>title</div> <!-- toggle button -->
-  <div>body</div> <!-- accordion block -->
+<div>
+  <div class="class-name">
+    <div>title 1</div> <!-- toggle button -->
+    <div>body 1</div> <!-- accordion block -->
+  </div>
+  <div class="class-name">
+    <div>title 2</div> <!-- toggle button -->
+    <div>body 2</div> <!-- accordion block -->
+  </div>
+  <!-- able to repeat many times -->
 </div>
 ```
 Click or tap the title, and then accordion block will expand or close.
-
 
 ## Javascript
 ```javascript
