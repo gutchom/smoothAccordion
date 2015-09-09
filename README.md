@@ -14,7 +14,6 @@ You can write down any length content in accordion box, and it will expand and c
 ```
 Click or tap the title, and then accordion block will expand or close.
 
-You can use same class name for every accordion block in your web site.
 
 ## Javascript
 ```javascript
