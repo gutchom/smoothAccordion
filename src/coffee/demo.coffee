@@ -1,2 +1,2 @@
 $(document).ready ->
-  $(".accordion-wrapper").autoHightAccordion()
+  $(".accordion-wrapper").smoothAccordion(1.0)
