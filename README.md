@@ -1,5 +1,7 @@
 # smoothAccordion
 jQuery plug-in for accordion with css3 transition
+It realizes use css3 transition for `height: auto` block element.
+You can write down any length content in accordion box, and it will expand and close smoothly.
 
 # How to use
 ## HTML markup
