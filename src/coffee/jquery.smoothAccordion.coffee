@@ -1,6 +1,8 @@
 (($) ->
 
-  $.fn.smoothAccordion = (speed = 0.5) ->
+  $.fn.autoHightAccordion = (speed = 0.5) ->
+
+    $elements = this
 
     getBlockHeight = (elems) ->
       height = []
@@ -30,17 +32,18 @@
           $content.css
             height: 0
 
-    accordionHeight = getBlockHeight this
-    closeAccordion this
-    this.children("div:last-child").css
+    accordionHeight = getBlockHeight $elements
+    closeAccordion $elements
+    $elements.children("div:last-child").css
       overflow: 'hidden'
       transition: "#{speed}s"
 
-    @each ->
+    $elements.each ->
       toggleAccordion this
+
     $(window).resize ->
-      @each ->
-        toggleAccordion this
+      accordionHeight = getBlockHeight $elements
+      closeAccordion $elements
 
     return this
 )(jQuery)
