@@ -1,6 +1,6 @@
 (($) ->
 
-  $.fn.autoHightAccordion = (options) ->
+  $.fn.smoothAccordion = (speed = 0.5) ->
 
     getBlockHeight = (elems) ->
       height = []
@@ -20,7 +20,7 @@
       $(elems).children("div:first-child").click ->
         $parent = $(this).parent()
         $content = $(this).next()
-        index = $parent.index() - 1
+        index = $parent.index()
         $parent.toggleClass "js-isAccordionOpen"
 
         if $parent.hasClass "js-isAccordionOpen"
@@ -30,8 +30,11 @@
           $content.css
             height: 0
 
-    accordionHeight = getBlockHeight(this)
-    closeAccordion(this)
+    accordionHeight = getBlockHeight this
+    closeAccordion this
+    this.children("div:last-child").css
+      overflow: 'hidden'
+      transition: "#{speed}s"
 
     @each ->
       toggleAccordion this
