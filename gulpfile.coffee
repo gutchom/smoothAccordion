@@ -16,7 +16,7 @@ gulp.task 'demo', [
 ]
 gulp.task 'plugin', ->
   gulp
-  .src 'src/coffee/jquery.autoHightAccordion.coffee'
+  .src 'src/coffee/jquery.smoothAccordion.coffee'
   .pipe $.plumber()
   .pipe $.coffee()
   .pipe $.uglify()
