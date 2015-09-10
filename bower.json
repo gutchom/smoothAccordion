@@ -1,0 +1,26 @@
+{
+  "name": "smoothAccordion",
+  "version": "0.1.0",
+  "homepage": "https://github.com/gutchom/smoothAccordion",
+  "authors": [
+    "gutchom <yskz.tg@gmail.com>"
+  ],
+  "description": "jQuery plug-in for accordion with css3 transition",
+  "main": "plugin/jquery.smoothAccordion.js",
+  "keywords": [
+    "jQuery",
+    "accordion",
+    "css3"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "~2.1.4"
+  }
+}
