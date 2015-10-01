@@ -1,4 +1,4 @@
-(($) ->
+($ = jQuery) do ->
 
   $.fn.autoHightAccordion = (speed = 0.5) ->
 
@@ -16,16 +16,16 @@
     closeAccordion = (elems) ->
       $(elems).children("div:last-child").css
         height: 0
-      $(elems).removeClass "js-isAccordionOpen"
+      $(elems).removeClass "js-is-accordion-open"
 
     toggleAccordion = (elems) ->
       $(elems).children("div:first-child").click ->
         $parent = $(this).parent()
         $content = $(this).next()
         index = $parent.index()
-        $parent.toggleClass "js-isAccordionOpen"
+        $parent.toggleClass "js-is-accordion-open"
 
-        if $parent.hasClass "js-isAccordionOpen"
+        if $parent.hasClass "js-is-accordion-open"
           $content.css
             height: (accordionHeight[index])+"px"
         else
@@ -46,4 +46,3 @@
       closeAccordion $elements
 
     return this
-)(jQuery)

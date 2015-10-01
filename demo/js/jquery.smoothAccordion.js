@@ -1,10 +1,13 @@
 (function() {
-  (function($) {
-    return $.fn.smoothAccordion = function(speed) {
-      var accordionHeight, closeAccordion, getBlockHeight, toggleAccordion;
+  var $;
+
+  ($ = jQuery)((function() {
+    return $.fn.autoHightAccordion = function(speed) {
+      var $elements, accordionHeight, closeAccordion, getBlockHeight, toggleAccordion;
       if (speed == null) {
         speed = 0.5;
       }
+      $elements = this;
       getBlockHeight = function(elems) {
         var $accordions, $elem, height, i, len;
         height = [];
@@ -22,7 +25,7 @@
         $(elems).children("div:last-child").css({
           height: 0
         });
-        return $(elems).removeClass("js-isAccordionOpen");
+        return $(elems).removeClass("js-is-accordion-open");
       };
       toggleAccordion = function(elems) {
         return $(elems).children("div:first-child").click(function() {
@@ -30,8 +33,8 @@
           $parent = $(this).parent();
           $content = $(this).next();
           index = $parent.index();
-          $parent.toggleClass("js-isAccordionOpen");
-          if ($parent.hasClass("js-isAccordionOpen")) {
+          $parent.toggleClass("js-is-accordion-open");
+          if ($parent.hasClass("js-is-accordion-open")) {
             return $content.css({
               height: accordionHeight[index] + "px"
             });
@@ -42,22 +45,21 @@
           }
         });
       };
-      accordionHeight = getBlockHeight(this);
-      closeAccordion(this);
-      this.children("div:last-child").css({
+      accordionHeight = getBlockHeight($elements);
+      closeAccordion($elements);
+      $elements.children("div:last-child").css({
         overflow: 'hidden',
         transition: speed + "s"
       });
-      this.each(function() {
+      $elements.each(function() {
         return toggleAccordion(this);
       });
       $(window).resize(function() {
-        return this.each(function() {
-          return toggleAccordion(this);
-        });
+        accordionHeight = getBlockHeight($elements);
+        return closeAccordion($elements);
       });
       return this;
     };
-  })(jQuery);
+  })());
 
 }).call(this);
