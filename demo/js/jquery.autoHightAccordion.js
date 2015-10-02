@@ -1,6 +1,6 @@
 (function() {
   (function($) {
-    return $.fn.autoHightAccordion = function(options) {
+    return $.fn.smoothAccordion = function(options) {
       var accordionHeight, closeAccordion, getBlockHeight, toggleAccordion;
       getBlockHeight = function(elems) {
         var $accordions, $elem, height, i, len;

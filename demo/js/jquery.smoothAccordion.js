@@ -1,8 +1,6 @@
 (function() {
-  var $;
-
-  ($ = jQuery)((function() {
-    return $.fn.autoHightAccordion = function(speed) {
+  (function($) {
+    return $.fn.smoothAccordion = function(speed) {
       var $elements, accordionHeight, closeAccordion, getBlockHeight, toggleAccordion;
       if (speed == null) {
         speed = 0.5;
@@ -60,6 +58,6 @@
       });
       return this;
     };
-  })());
+  })(jQuery);
 
 }).call(this);

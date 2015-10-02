@@ -1,6 +1,6 @@
-($ = jQuery) do ->
+do ($ = jQuery) ->
 
-  $.fn.autoHightAccordion = (speed = 0.5) ->
+  $.fn.smoothAccordion = (speed = 0.5) ->
 
     $elements = this
 
